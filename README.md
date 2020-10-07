@@ -15,7 +15,7 @@ face? … Is this a face? … Is this a face?” Since there are 6,000 or more t
 * Like a series of waterfalls, the OpenCV cascade breaks the problem of detecting faces into multiple stages. For each block, it does a very rough and quick test. If that passes, it does a slightly more detailed test, and so on. The algorithm may have 30 to 50 of these stages or cascades, and it will only detect a face if all stages pass.
 
 # Test 
-You first pass in the image and cascade names as command-line arguments. We’ll use the my  image as well as the default cascade for detecting faces provided by OpenCV.
+You first pass in the image and cascade names as command-line arguments. I am using my  image as well as the default cascade for detecting faces provided by OpenCV.
 
 
 ![](https://github.com/MohammadSarfaraz/face-recognition-on-live-video-from-your-webcam/blob/main/sar.jpg)
