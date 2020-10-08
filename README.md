@@ -4,19 +4,23 @@ face recognition on live video from your webcam using python module face recogni
 # OpenCV
 * OpenCV is the most popular library for computer vision. Originally written in C/C++, it now provides bindings for Python.
 
-* OpenCV uses machine learning algorithms to search for faces within a picture. Because faces are so complicated, there isn’t one simple test that will tell you if it found a face or not. Instead, there are thousands of small patterns and features that must be matched. The algorithms break the task of identifying the face into thousands of smaller, bite-sized tasks, each of which is easy to solve. These tasks are also called classifiers.
+# Face recognition with OpenCV, Python, and face_recognition model
 
-* For something like a face, you might have 6,000 or more classifiers, all of which must match for a face to be detected (within error limits, of course). But therein lies the
-problem: for face detection, the algorithm starts at the top left of a picture and moves down across small blocks of data, looking at each block, constantly asking, “Is this a
-face? … Is this a face? … Is this a face?” Since there are 6,000 or more tests per block, you might have millions of calculations to do, which will grind your computer to a halt.
+* This is a demo of running face recognition on live video from your webcam. It's a little more complicated than the other example, but it includes some basic performance tweaks to make things run a lot faster:
+*   1. Process each video frame at 1/4 resolution (though still display it at full resolution)
+*   2. Only detect faces in every other frame of video.
 
-* To get around this, OpenCV uses cascades. What’s a cascade? The best answer can be found in the dictionary: “a waterfall or series of waterfalls.”
+# PLEASE NOTE: This example requires OpenCV (the `cv2` library) to be installed only to read from your webcam.
+* OpenCV is *not* required to use the face_recognition library. It's only required if you want to run this specific demo. If you have trouble installing it, try any of the other demos that don't require it instead.
+1. Get a reference to webcam #0 (the default one)
+2. Load a sample picture and learn how to recognize it.
+3. Create arrays of known face encodings and their names
+4. Grab a single frame of video
+5. Resize frame of video to 1/4 size for faster face recognition processing
+6. Convert the image from BGR color (which OpenCV uses) to RGB color (which face_recognition uses)
+7. Only process every other frame of video to save time
+8. Find all the faces and face encodings in the current frame of video
+9. Display the results
+eg. ![]()
 
-* Like a series of waterfalls, the OpenCV cascade breaks the problem of detecting faces into multiple stages. For each block, it does a very rough and quick test. If that passes, it does a slightly more detailed test, and so on. The algorithm may have 30 to 50 of these stages or cascades, and it will only detect a face if all stages pass.
-
-# Test 
-You first pass in the image and cascade names as command-line arguments. I am using my  image as well as the default cascade for detecting faces provided by OpenCV.
-
-
-![](https://github.com/MohammadSarfaraz/face-recognition-on-live-video-from-your-webcam/blob/main/sar.jpg)
 
