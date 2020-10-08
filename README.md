@@ -21,6 +21,7 @@ face recognition on live video from your webcam using python module face recogni
 7. Only process every other frame of video to save time
 8. Find all the faces and face encodings in the current frame of video
 9. Display the results
-Here eg. ![](https://github.com/MohammadSarfaraz/face-recognition-on-live-video-from-your-webcam/blob/main/test.png)
+Here eg. given below It recognize my face and create squre with my name print on it otherwise unknown 
+![](https://github.com/MohammadSarfaraz/face-recognition-on-live-video-from-your-webcam/blob/main/test.png)
 
 
